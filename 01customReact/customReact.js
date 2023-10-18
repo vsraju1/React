@@ -1,17 +1,30 @@
-function customRendor(reactElement, container){
-    
+
+function customRender(reactElement, container){
+    const domElement = document.createElement(reactElement.type)
+    domElement.innerHTML = reactElement.children
+    domElement.setAttribute('href', reactElement.props.href)
+    domElement.setAttribute('target', reactElement.props.target)
+    container.appendChild(domElement)
+    // const domElement = document.createElement(reactElement.type)
+    // domElement.innerHTML = reactElement.children
+    // for (const prop in reactElement.props) {
+    //     if (prop === 'children') continue;
+    //     console.log(prop)
+    //     domElement.setAttribute(prop, reactElement.props[prop])
+        
+    // }
 }
 
 const reactElement = {
     type: 'a',
-    props : {
-        href: "www.google.com",
-        target : "_blank"
+    props: {
+        href: 'https://google.com',
+        target: '_blank'
     },
-    children : 'click me to react google'
+    children: 'click me to visit google'
 }
 
-const mainContainer = document.querySelector("#root")
+const mainContainer = document.querySelector('#root')
 
-customRendor(reactElement, mainContainer)
+customRender(reactElement, mainContainer)
 
