@@ -10,8 +10,7 @@ function customRender(reactElement, container){
     for (const prop in reactElement.props) {
         if (prop === 'children') continue;
         console.log(prop)
-        domElement.setAttribute(prop, reactElement.props[prop])
-        
+        domElement.setAttribute(prop, reactElement.props[prop])   
     }
     container.appendChild(domElement)
 }
