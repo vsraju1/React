@@ -7,7 +7,7 @@ function App() {
   let [counter, rajuCounter] = useState(10)
   const addValue = () => {
     console.log('value added', counter)
-    if (counter >= 10 & counter <20) {
+    if (counter >= 0 & counter <20) {
       rajuCounter(counter + 1)
     }
   }
