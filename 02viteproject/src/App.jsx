@@ -1,8 +1,9 @@
 import { useState } from 'react'
 
 function App() {
+  const name = "V Shanmukha Raju"
   return (
-    <h1>vite project created by V Shanmukha Raju</h1>
+    <h1>vite project created by {name}</h1>
   )
 }
 
