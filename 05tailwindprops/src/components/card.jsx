@@ -1,4 +1,5 @@
 import React from 'react'
+
 // if btnText is not mentioned in the card then default text for btnText is click here 
 function Card({userName, btnText = "click here"}) {
     
